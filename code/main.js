@@ -11,9 +11,19 @@ iconClose.addEventListener('click', () =>{
     navbarMenu.classList.remove('active');
 });
 
-menuLinks.forEach((menuLink) => {
+menuLinks.forEach(function (menuLink) {
     menuLink.addEventListener('click', () => {
         navbarMenu.classList.remove('active');
-    })
+    });
 }) 
+
+// change background header
+function scrollHeader() {
+    const header = document.getElementById('header');
+    this.scrollY >= 20 ? header.classList.add('active') : header.classList.remove('active');  
+}
+
+window.addEventListener('scroll', scrollHeader);
+
+
 
